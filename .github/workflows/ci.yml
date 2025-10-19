@@ -15,5 +15,8 @@ jobs:
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
       - name: Build
         run: cmake --build build -j
+      - name: List build outputs (debug)
+        run: ls -la build
+
       - name: Test
         run: ./build/des_tests
